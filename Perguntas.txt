@@ -1,5 +1,5 @@
 1) O que acontece se você não passar o segundo parâmetro ([]) no useEffect?
-R - Se você não passar o segundo parâmetro o useEffect só irá executar na primeira renderização da página.
+R - Se você não passar o segundo parâmetro o useEffect só irá executar apenas quando o componente renderizar.
 
 2) Explique o conceito de props no React. Por que é importante que componentes recebam dados através das props?
 R - Props vem de propriedade. Elas funcionam de forma parecida com parâmetros de uma função (Que na comparação seria o componente). 
