@@ -27,6 +27,9 @@ function App() {
         // divas.map(user => <><br></br><span>{user.name}</span></>)
         
         divas.map(divas => (
+
+          // <div></div>
+
           <li style={{ listStyle: "none", cursor:'pointer' }} key={divas.id}>
           {divas.id} - {divas.nome}
           </li>
