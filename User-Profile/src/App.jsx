@@ -28,15 +28,18 @@ function App() {
     <section className='bg-blue-400 flex w-screen h-screen justify-around items-center p-4'>
      
       {/* Main Info */}
-      <section className='bg-amber-100/10 w-2/10 h-auto flex flex-col items-start gap-4 p-6 rounded-lg' key={user.id}>
+      <section className='bg-amber-100/10 w-5/20 h-auto flex flex-col items-start gap-2 p-6 rounded-lg' key={user.id}>
 
-        <img className='self-center w-50 h-64 rounded-lg' src="src/assets/jesse.png" alt="" />
+        <img className='self-center w-50 h-60 rounded-lg' src="src/assets/jesse.png" alt="" />
         
-        <span className='text-white text-4xl font-bold'>{user.nome}, {user.idade}</span>
+        <div className='flex flex-col mt-3 mb-3'>
+          <span className='text-white text-4xl font-bold'>{user.nome}, {user.idade}</span>
+          <span className='text-white/70 text-1xl font-semibold'>{user.email}</span>
+        </div>
 
         {/* Personal Details */}
-        <section className='text-gray-200 text-lg  flex flex-col gap-0.5'>
-          <span className='font-bold'>Endereço</span>
+        <section className='text-white/80 text-lg flex flex-col gap-1'>
+          <span className='font-bold text-1x1'>Endereço</span>
           <ul>
             <li>{endereco.cidade} - {endereco.estado} </li>
             <li>{endereco.rua}, {endereco.numero}</li> 
@@ -44,8 +47,8 @@ function App() {
         </section>
         
         {/* Skills */}
-        <section className='text-gray-200 text-lg flex flex-col gap-0.5'>
-          <span className='font-bold'>Habilidades</span>
+        <section className='text-white/80 text-lg flex flex-col gap-1'>
+          <span className='font-bold text-1x1'>Habilidades</span>
           <ul className='flex flex-wrap'>
           {
             habilidades.map(habilidade => <><li>{habilidade}ㅤ•ㅤ</li></>)
@@ -56,7 +59,7 @@ function App() {
       </section>
 
       {/* Portfolio */}
-      <section className='bg-amber-100/10 w-7/10 h-auto p-6 flex flex-row flex-wrap justify-around items-center gap-8 rounded-lg'>
+      <section className='bg-amber-100/10 w-14/20 h-auto p-6 flex flex-row flex-wrap justify-around items-center gap-8 rounded-lg'>
         {
           projetos.map(projeto => <>
             <div key={projeto.id} className='bg-gray-100/90 w-100 h-70 p-5 rounded-lg flex flex-col'>
