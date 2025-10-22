@@ -1,0 +1,18 @@
+1) O que acontece se você não passar o segundo parâmetro ([]) no useEffect?
+R - Se você não passar o segundo parâmetro o useEffect só irá executar na primeira renderização da página.
+
+2) Explique o conceito de props no React. Por que é importante que componentes recebam dados através das props?
+R - Props vem de propriedade. Elas funcionam de forma parecida com parâmetros de uma função (Que na comparação seria o componente). 
+Por exemplo, posso fazer um botão que terá fonte e espaçamentos (Padding e Margin) proporcionais, mas, consigo settar a cor, tamanho do botão e contéudo por props.
+Props são importantes porque ao passa-las é possível personalizar o componente sem a necessidade de refazer ele, evitando repetição de código e tornando ele mais compreensível.
+
+3) O que o TailwindCSS oferece de vantagem em relação ao CSS tradicional?
+R - Pra começar, o TailWind é bem mais dinâmico, não tendo necessidade de ficar criando arquivos .css para colocar estilo ou modificar eles (CSS inline é muito feio).
+Embora seja menos flexível, é bem mais prático e rápido, além de deixar o código bem mais clean.
+Por fim, o TailWind tem muito mais coisa "Pronta", facilitando para programadores que tem dificuldade com estilização ou que estão com pressa (Quanto mais freelas melhor né).
+
+4)Identifique o problema no código abaixo e marque a alternativa que exibe o
+problema do código.
+R - B) A renderização condicional ({mensagem &;&}) impede o useEffect de
+atualizar o estado.
+
