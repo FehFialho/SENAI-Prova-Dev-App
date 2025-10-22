@@ -19,41 +19,51 @@ function App() {
   console.log(response.data)
   }
 
+  const title = "<Div>as Bosch"
+
   return (
     <>
-      {/* <Card></Card> */}
+      {/* <Card></Card> Ia fazer em Props mas desisti (aff)*/}
+      <nav className='w-full h-14 bg-red-800/90 font-bold text-white text-2xl flex justify-center items-center'>{title}</nav>
       
-      <section className='bg-teal-400 m-10 p-2 flex flex-row flex-wrap w-9/10 justify-around'>
+      <section className='m-10 p-2 flex flex-row flex-wrap w-9/10 justify-around'>
         {
           // divas.map(user => <><br></br><span>{user.name}</span></>)
           divas.map(divas => (
 
-            <div className='bg-teal-100 m-2 h-80 w-100 flex flex-col rounded-2xl' key={divas.id}>
+            <div className='m-2 h-80 w-100 flex flex-col rounded-lg shadow-xl/30' key={divas.id}>
               
-              <img className='w-full h-65 rounded-t-2xl ' src={divas.imagem} alt="Personagem Favorito"/>
+              {/* Image */}
+              <section>
+                {/* <div className='w-full h-auto bg-amber-200'></div> */}
+                <img className='w-full h-65 rounded-t-lg ' src={divas.imagem} alt="Personagem Favorito"/>
+                {/* <div className='w-full h-auto bg-amber-200'></div> */}
+              </section>
               
               {/* Data */}
               <section className='flex flex-row w-full h-full gap-2 items-center justify-center'>
                 
-                <span>{divas.id} - {divas.nome} {divas.sobrenome} </span>
+                <span className='text-gray-600'>{divas.id} - {divas.nome} {divas.sobrenome} </span>
 
                 {/* Conditional Formatting! */}
                 {
                   divas.apelido &&
-                  <span>( {divas.apelido} )</span>             
+                  <span className='text-gray-600'>( {divas.apelido} )</span>             
                 }
+
                 {
                   divas.status == 'Matriculado' &&
-                  <div className='bg-green-400 rounded-full w-6 h-6'></div>                
+                  <div className='bg-green-400 rounded-full w-5 h-5 ml-2'></div>                
+                }
+
+                {
+                  divas.status != 'Matriculado' &&
+                  <div className='bg-red-400 rounded-full w-6 h-6'></div>                
                 }
                 
               </section>
 
             </div>
-
-            // <li style={{ listStyle: "none", cursor:'pointer' }} key={divas.id}>
-            // {divas.id} - {divas.nome}
-            // </li>
           ))
         }
       </section>
