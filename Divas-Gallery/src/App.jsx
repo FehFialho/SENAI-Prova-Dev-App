@@ -21,20 +21,28 @@ function App() {
 
   return (
     <>
-      <Card></Card>
+      {/* <Card></Card> */}
       
-      {
-        // divas.map(user => <><br></br><span>{user.name}</span></>)
-        
-        divas.map(divas => (
+      <section className='bg-red-600 m-10 p-2'>
+        {
+          // divas.map(user => <><br></br><span>{user.name}</span></>)
+          
+          
 
-          // <div></div>
+          divas.map(divas => (
 
-          <li style={{ listStyle: "none", cursor:'pointer' }} key={divas.id}>
-          {divas.id} - {divas.nome}
-          </li>
-        ))
-      }
+            <div className='bg-red-400 m-2 h-60 w-60' key={divas.id}>
+              <span>{divas.id} - {divas.nome} {divas.sobrenome} </span>
+              <div></div>
+              <img className='w-50 max-h-50' src={divas.imagem} alt="" />
+            </div>
+
+            // <li style={{ listStyle: "none", cursor:'pointer' }} key={divas.id}>
+            // {divas.id} - {divas.nome}
+            // </li>
+          ))
+        }
+      </section>
     </>
   )
 }
